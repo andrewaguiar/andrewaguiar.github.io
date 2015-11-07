@@ -48,10 +48,11 @@ When you create a site it is dificult to find good free images with good resolut
   - [bootswatch.com](https://bootswatch.com/): Free themes for bootstrap.
 
 ## Testing your site
-  - [www.webpagetest.org](http://www.webpagetest.org): Test the performance of your site.
+  - [webpagetest.org](http://www.webpagetest.org): Test the performance of your site.
   - [seositecheckup.com](http://seositecheckup.com): SEO (Search Engine Optimization) checkup.
   - [responsivetest.net](http://responsivetest.net): Test how responsive your site is.
-  - [www.studiopress.com](http://www.studiopress.com): Test your site in several screen sizes.
+  - [studiopress.com](http://www.studiopress.com): Test your site in several screen sizes.
+  - [gauntlet.io/](http://gauntlet.io/): Test your website security againts several scanners (14 days free trial).
 
 ## Others
   - [fortawesome.github.io/Font-Awesome](https://fortawesome.github.io/Font-Awesome): Huge set of icons as fonts.
