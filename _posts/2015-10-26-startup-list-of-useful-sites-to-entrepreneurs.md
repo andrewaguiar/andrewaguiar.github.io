@@ -18,7 +18,7 @@ When you create a site it is dificult to find good free images with good resolut
 
   - [jaymantri.com](http://jaymantri.com/)
   - [snapwiresnaps.tumblr.com](http://snapwiresnaps.tumblr.com/)
-  - [www.freeimages.com](http://www.freeimages.com/)
+  - [freeimages.com](http://www.freeimages.com/)
   - [picjumbo.com](http://picjumbo.com/)
   - [splitshire.com](http://splitshire.com/)
   - [lockandstockphotos.com](http://lockandstockphotos.com/)
@@ -26,12 +26,12 @@ When you create a site it is dificult to find good free images with good resolut
   - [stocksnap.io](https://stocksnap.io/)
   - [negativespace.co](http://negativespace.co/)
   - [picography.co](http://picography.co/)
-  - [www.lifeofpix.com](http://www.lifeofpix.com/)
+  - [lifeofpix.com](http://www.lifeofpix.com/)
   - [unsplash.com](http://unsplash.com/)
   - [getrefe.tumblr.com](http://getrefe.tumblr.com/)
-  - [www.gratisography.com](http://www.gratisography.com/)
+  - [gratisography.com](http://www.gratisography.com/)
   - [deathtothestockphoto.com](http://deathtothestockphoto.com/)
-  - [www.pexels.com](https://www.pexels.com/)
+  - [pexels.com](https://www.pexels.com/)
   - [superfamous.com](http://superfamous.com/)
   - [publicdomainarchive.com](http://publicdomainarchive.com/)
 
@@ -41,9 +41,11 @@ When you create a site it is dificult to find good free images with good resolut
 
 ## Themes and templates
 
-  - [wrapbootstrap.com](https://wrapbootstrap.com): wrapBootstrap is a marketplace for premium Bootstrap themes and templates.
-  - [www.foundationdeck.com](https://www.foundationdeck.com): Foundation Deck is a foundation theme marketplace.
+  - [wrapbootstrap.com](https://wrapbootstrap.com): WrapBootstrap is a marketplace for premium Bootstrap themes and templates.
+  - [foundationdeck.com](https://www.foundationdeck.com): Foundation Deck is a foundation theme marketplace.
   - [startbootstrap.com](http://startbootstrap.com): Start Bootstrap is a library of free to download Bootstrap 3 themes and templates.
+  - [bootstrapzero.com](http://www.bootstrapzero.com/): Curated open source themes for booststrap.
+  - [bootswatch.com](https://bootswatch.com/): Free themes for bootstrap.
 
 ## Testing your site
   - [www.webpagetest.org](http://www.webpagetest.org): Test the performance of your site.
