@@ -35,6 +35,15 @@ When you create a site it is dificult to find good free images with good resolut
   - [superfamous.com](http://superfamous.com/)
   - [publicdomainarchive.com](http://publicdomainarchive.com/)
 
+## Videos
+
+Sometimes a video can be better to explain your ideas or products, here goes some services that you can use:
+
+  - [animoto.com](https://animoto.com/)
+  - [goanimate.com](https://goanimate.com/)
+  - [studio.stupeflix.com](https://studio.stupeflix.com/)
+  - [wideo.co](http://wideo.co/)
+
 ## Generators
   - [www.favicon-generator.org](http://www.favicon-generator.org): Generate favicons and icon for Web, Android, Windows Phone and IOS.
   - [www.xml-sitemaps.com](https://www.xml-sitemaps.com): Generate the sitemap of your site.
