@@ -2,7 +2,7 @@
 layout: post
 title: "Startup - List of useful sites to entrepreneurs"
 ---
-When I started creating some web products and sites I always found myself with little options in terms of images, components and tools. Here, I present a list of very useful sites to help you in your work.
+When I started creating some web products and sites I always found myself with few options in terms of images, components and tools. Here, I present a list of very useful sites to help you in your work.
 
 ## HTML Frameworks
 Create a website from scratch is not easy, you need to create a default css, define some css classes, components and guidelines. For this reason, I strongly recommend that you to use an html framework, this can save you a lot of time and put some order in your code.
