@@ -25,12 +25,12 @@ Considering that we can redefine the method_missing in our class we could change
 ```ruby
 class A
   def method_missing(method_name, *args, &block)
-    puts "#{method_name} with #{args.length} could not be found"
+    puts "#{method_name} with #{args.length} arguments could not be found"
   end
 end
 
 a = A.new
-a.testing # testing with 0 could not be found
-a.testing(1, 2, 3) # testing with 3 could not be found
+a.testing # testing with 0 arguments could not be found
+a.testing(1, 2, 3) # testing with 3 arguments could not be found
 ```
 
