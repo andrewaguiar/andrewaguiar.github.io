@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "Ruby - The method_missing"
+title: "Ruby - Understanding method_missing"
 ---
 
-Ruby is a very dynamic language and has several metaprogramming features that can easy your life, 
-here I present some of them.
 Everytime you call a method in a ruby object ruby tries to find this method definition in all hierarchy, 
-for example calling the `to_s` method of Fixnum makes ruby to search it in Fixnum and Object. 
-In case of ruby doesn't find the method it will be caught by ``method_missing`` declared in BasicObject.
+for example calling the `to_s` method of ``Fixnum`` makes ruby to search it in ``Fixnum`` and ``Object``.
+In case of ruby doesn't find the method it will be caught by (http://ruby-doc.org/core-2.1.0/BasicObject.html#method-i-method_missing)[method_missing] method declared in ``BasicObject``.
 
 ```ruby
 class A
@@ -83,7 +81,7 @@ class Enviroment
 end
 ```
 
-Now instead of pass the enviroment we need only call a method called **on_<env that we would like to check>**
+Now instead of pass the enviroment we need only call a method called **on_**env.
 
 ```ruby
 enviroment = Enviroment.new "development"
