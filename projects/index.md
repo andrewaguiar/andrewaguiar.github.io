@@ -3,9 +3,9 @@ layout: page
 title: Projects
 ---
 
-## Brow - [brow.io](http://www.brow.io)
+## Brow - [brow.io](http://www.brow.io) - beta
 
-Brow is a platform to help travellers to discovery, receive tips and helps from other travellers and even natives, all based on you current location (geo localization).
+Brow is a platform to help lawyers and small lawyers offices to organize their business.
 
 Technology stack
 
@@ -13,7 +13,6 @@ Technology stack
   - [Git](https://git-scm.com) as SCM hosted in [Bitbucket](https://bitbucket.org)
   - [Heroku](https://www.heroku.com)
   - [Postgresql](http://www.postgresql.org) as relational database
-  - [Solr](http://lucene.apache.org/solr) to geo localization and textual searching
   - [Bootstrap](http://getbootstrap.com) as html5 framework
 
 ## AcoesBovespa - [acoesbovespa.com](http://www.acoesbovespa.com)
