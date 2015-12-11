@@ -3,8 +3,6 @@ layout: post
 title: "Ruby - How to store and load ENV variables in dev "
 ---
 
-## Problem
-
 It is very common to use an env variable in ours projects, specialy when we are using Docker or Heroku. In this case several configurations will be done using ENV vars.
 
 Also we want to use that without so much work in our development enviroment.
@@ -40,3 +38,6 @@ echo ".env" >> .gitignore
 ```
 
 You should only add a ``.env.example`` without any information as an example of what should be configured.
+
+## References
+  - Dotenv: [dotenv](https://github.com/bkeepers/dotenv).
