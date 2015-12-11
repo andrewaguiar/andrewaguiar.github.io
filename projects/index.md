@@ -3,7 +3,7 @@ layout: page
 title: Projects
 ---
 
-## Brow - [brow.io](http://www.brow.io) - --beta--
+## Brow - [brow.io](http://www.brow.io) - beta
 
 Brow is a platform to help lawyers and small lawyers offices to organize their business.
 
