@@ -12,12 +12,12 @@
   <meta property="og:title" content="{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}"/>
   <meta property="og:description" content="{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}"/>
   <meta property="og:url" content="http://www.andrewsaguiar.com/"/>
-  <meta property="og:image" content="http://www.andrewsaguiar.com/public/images/background.jpg"/>
+  <meta property="og:image" content="http://www.andrewsaguiar.com/public/images/posts/{{ page.image }}"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}"/>
   <meta name="twitter:description" content="{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}"/>
   <meta name="twitter:url" content="http://www.andrewsaguiar.com/"/>
-  <meta name="twitter:image:src" content="www.andrewsaguiar.com/public/images/background.jpg"/>
+  <meta name="twitter:image:src" content="http://www.andrewsaguiar.com/public/images/posts/{{ page.image }}"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>{% if page.title == "Home" %}{{ site.title }} &middot; {{ site.tagline }}{% else %}{{ page.title }} &middot; {{ site.title }}{% endif %}</title>
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/all.css?v=3">
