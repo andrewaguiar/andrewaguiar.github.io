@@ -145,7 +145,7 @@ TemporalAccessor temporalAccessor = formatter.parse("21/10/2015 11:37:09.702");
 LocalDateTime localDateTime = LocalDateTime.from(temporalAccessor);
 ```
 
-### References
+## References
   - Java 7 SimpleDateFormat and patterns: [java/text/SimpleDateFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html).
   - Java 7 DateFormat: [java/text/DateFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html).
   - Java 7 Locale: [java/util/Locale.html](http://docs.oracle.com/javase/7/docs/api/java/util/Locale.html).
