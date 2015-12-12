@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Startup - List of useful sites to entrepreneurs"
-image: "startup.jpg"
+image: "startup"
 ---
 When I started creating some web products and sites I always found myself with few options in terms of images, components and tools. Here, I present a list of very useful sites to help you in your work.
 

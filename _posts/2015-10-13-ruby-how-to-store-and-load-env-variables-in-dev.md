@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby - How to store and load ENV variables in dev "
-image: "mountain.jpg"
+image: "stones"
 ---
 
 It is very common to use an env variable in ours projects, specialy when we are using Docker or Heroku. In this case several configurations will be done using ENV vars.
