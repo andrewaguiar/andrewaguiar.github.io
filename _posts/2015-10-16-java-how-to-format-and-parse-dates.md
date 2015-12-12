@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Java - How to format and parse dates"
+image: "clock.jpg"
 ---
 
 Hi guys here comes a very quick and usefull guide of how to parse and format Dates in Java, I hope it helps.
