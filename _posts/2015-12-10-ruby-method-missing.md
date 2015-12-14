@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Ruby - Understanding method_missing"
+image: "binocular-telescope.jpg"
 ---
 
 ## 
