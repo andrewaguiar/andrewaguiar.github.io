@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Ruby - Quick capybaha cheat sheet"
+image: "capybaha"
 ---
 
 ## Navigation
