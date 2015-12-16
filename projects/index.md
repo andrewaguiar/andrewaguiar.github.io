@@ -3,7 +3,7 @@ layout: page
 title: Projects
 ---
 
-## EJurista - [jurista.io](http://www.jurista.com) - beta
+## EJurista - [ejurista.com](http://www.ejurista.com) - beta
 
 EJurista is a platform to help independent lawyers and small lawyers offices to organize their business.
 
