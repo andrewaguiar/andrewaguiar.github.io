@@ -3,9 +3,9 @@ layout: page
 title: Projects
 ---
 
-## Brow - [brow.io](http://www.brow.io) - beta
+## EJurista - [jurista.io](http://www.jurista.com) - beta
 
-Brow is a platform to help lawyers and small lawyers offices to organize their business.
+EJurista is a platform to help independent lawyers and small lawyers offices to organize their business.
 
 Technology stack
 
