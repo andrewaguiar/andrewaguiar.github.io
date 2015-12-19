@@ -37,3 +37,6 @@ Get the price of any stock of BMFBovespa (stock exchange of São Paulo)
 
 Uses the correios SOAP to calculate shipping prices, also can return address given a brazilian zipcode.
 
+## logicall - [rubygems.org/gems/logicall](https://rubygems.org/gems/logicall)
+
+Logicall is a minimalist implementation of interactor pattern with clear separation between arguments and result.
