@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+image: wood-architect-table-work
 ---
 
 ## EJurista - [ejurista.com.br](http://www.ejurista.com.br) - alpha
