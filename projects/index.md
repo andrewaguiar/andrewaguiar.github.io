@@ -41,3 +41,7 @@ Uses the correios SOAP to calculate shipping prices, also can return address giv
 ## logicall - [rubygems.org/gems/logicall](https://rubygems.org/gems/logicall)
 
 Logicall is a minimalist implementation of interactor pattern with clear separation between arguments and result.
+
+## icms - [rubygems.org/gems/icms](https://rubygems.org/gems/icms)
+
+Icms implements icms (Brazilian tax) between states.
