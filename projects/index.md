@@ -16,7 +16,7 @@ Technology stack
   - [Postgresql](http://www.postgresql.org) as relational database
   - [Bootstrap](http://getbootstrap.com) as html5 framework
 
-## ZenTrip - [acoesbovespa.com](http://www.zentrip.com.br)
+## ZenTrip - [zentrip.com.br](http://www.zentrip.com.br)
 
 Zen Trip is a web application (mobile friendly) to help people organize their travels, registering costs, places to visit and details.
 
