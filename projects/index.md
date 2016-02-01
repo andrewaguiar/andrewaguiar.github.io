@@ -16,6 +16,18 @@ Technology stack
   - [Postgresql](http://www.postgresql.org) as relational database
   - [Bootstrap](http://getbootstrap.com) as html5 framework
 
+## ZenTrip - [acoesbovespa.com](http://www.zentrip.com.br)
+
+Zen Trip is a web application (mobile friendly) to help people organize their travels, registering costs, places to visit and details.
+
+Technology stack
+
+  - [Ruby on Rails](http://rubyonrails.org) as backend
+  - [Git](https://git-scm.com) as SCM hosted in [Bitbucket](https://bitbucket.org)
+  - [Heroku](https://www.heroku.com)
+  - [Postgresql](http://www.postgresql.org) as relational database
+  - [Bootstrap](http://getbootstrap.com) as HTML5 framework
+
 ## AcoesBovespa - [acoesbovespa.com](http://www.acoesbovespa.com)
 
 Ações Bovespa is a web application (mobile friendly) and an android app designed to help people that negociate stocks on São Paulo stock exchange (BMF-Bovespa) to track stock prices.
