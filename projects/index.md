@@ -4,9 +4,9 @@ title: Projects
 image: wood-architect-table-work
 ---
 
-## EJurista - [ejurista.com.br](http://www.ejurista.com.br) - alpha
+## VimCasar - [vimcasar.com.br](http://www.vimcasar.com.br)
 
-EJurista is a platform to help independent lawyers and small lawyers offices to organize their business.
+VimCasar is an wedding site, gifts registration and rsvp to couples.
 
 Technology stack
 
