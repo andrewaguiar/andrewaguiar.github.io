@@ -28,19 +28,18 @@ Technology stack
   - [Postgresql](http://www.postgresql.org) as relational database
   - [Bootstrap](http://getbootstrap.com) as HTML5 framework
 
-## AcoesBovespa - [acoesbovespa.com](http://www.acoesbovespa.com)
+## Brow - [brow.io](http://www.brow.io)
 
-Ações Bovespa is a web application (mobile friendly) and an android app designed to help people that negociate stocks on São Paulo stock exchange (BMF-Bovespa) to track stock prices.
+Brow is a tool to help unemployed people to search jobs performing job positions in several sites and allowing friends and colleges to help them.
 
 Technology stack
 
   - [Ruby on Rails](http://rubyonrails.org) as backend
-  - [Android](https://www.android.com) hybrid app (using WebView)
   - [Git](https://git-scm.com) as SCM hosted in [Bitbucket](https://bitbucket.org)
   - [Heroku](https://www.heroku.com)
   - [Postgresql](http://www.postgresql.org) as relational database
-  - [Solr](http://lucene.apache.org/solr) to geo localization and textual searching
   - [Bootstrap](http://getbootstrap.com) as HTML5 framework
+  - [Redis](http://redis.io/) as searching results cache.
 
 ## bovespa-prices - [rubygems.org/gems/bovespa-prices](https://rubygems.org/gems/bovespa-prices)
 
