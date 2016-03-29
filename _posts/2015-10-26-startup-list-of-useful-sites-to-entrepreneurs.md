@@ -46,9 +46,15 @@ Sometimes a video can be better to explain your ideas or products, here goes som
   - [studio.stupeflix.com](https://studio.stupeflix.com/)
   - [wideo.co](http://wideo.co/)
 
+## Free timelapses videos
+
+  - [videos.pexels.com](https://videos.pexels.com/)
+  - [pixabay.com/en/videos](https://pixabay.com/en/videos/)
+
 ## Generators
-  - [www.favicon-generator.org](http://www.favicon-generator.org): Generate favicons and icon for Web, Android, Windows Phone and IOS.
-  - [www.xml-sitemaps.com](https://www.xml-sitemaps.com): Generate the sitemap of your site.
+  - [favicon-generator.org](http://www.favicon-generator.org): Generate favicons and icon for Web, Android, Windows Phone and IOS.
+  - [xml-sitemaps.com](https://www.xml-sitemaps.com): Generate the sitemap of your site.
+  - [freefavicon.com](http://www.freefavicon.com/iconmaker/): A good favicon gallery and a favicon generator.
 
 ## Themes and templates
 

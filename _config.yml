@@ -7,7 +7,6 @@ redcarpet:
 # Permalinks
 # permalink:        pretty
 permalink: /blog/:year/:month/:day/:title
-relative_permalinks: true
 
 # Setup
 title:            'Andrew Aguiar'
