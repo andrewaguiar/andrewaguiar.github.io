@@ -1,7 +1,7 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      pygments
-redcarpet:
+kramdown:
   extensions: ['no_intra_emphasis', 'fenced_code_blocks', 'autolink', 'strikethrough', 'superscript', 'with_toc_data']
 
 # Permalinks
