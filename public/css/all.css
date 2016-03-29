@@ -1,3 +1,40 @@
+/*
+ *                        ___
+ *                       /\_ \
+ *  _____     ___     ___\//\ \      __
+ * /\ '__`\  / __`\  / __`\\ \ \   /'__`\
+ * \ \ \_\ \/\ \_\ \/\ \_\ \\_\ \_/\  __/
+ *  \ \ ,__/\ \____/\ \____//\____\ \____\
+ *   \ \ \/  \/___/  \/___/ \/____/\/____/
+ *    \ \_\
+ *     \/_/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/poole.
+ */
+
+
+/*
+ * Contents
+ *
+ * Body resets
+ * Custom type
+ * Messages
+ * Container
+ * Masthead
+ * Posts and pages
+ * Pagination
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Body resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -23,7 +60,7 @@ html {
 
 body {
   color: #515151;
-  background-color: #f8f6f3;
+  background-color: #fff;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -119,7 +156,7 @@ code {
   padding: .25em .5em;
   font-size: 85%;
   color: #bf616a;
-  background-color: #EAEAEA;
+  background-color: #f9f9f9;
   border-radius: 3px;
 }
 pre {
@@ -133,7 +170,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #EAEAEA;
+  background-color: #f9f9f9;
 }
 pre code {
   padding: 0;
@@ -447,7 +484,7 @@ a.pagination-item:hover {
 .highlight .sx { color: #c30 } /* Literal.String.Other */
 .highlight .sr { color: #3aa } /* Literal.String.Regex */
 .highlight .s1 { color: #c30 } /* Literal.String.Single */
-.highlight .ss { color: #A07800 } /* Literal.String.Symbol */
+.highlight .ss { color: #fc3 } /* Literal.String.Symbol */
 .highlight .bp { color: #366 } /* Name.Builtin.Pseudo */
 .highlight .vc { color: #033 } /* Name.Variable.Class */
 .highlight .vg { color: #033 } /* Name.Variable.Global */
@@ -685,11 +722,11 @@ a.sidebar-nav-item:focus {
 
 /* Blue */
 .theme-base-0d .sidebar {
-  background-color: #217596;
+  background-color: #6a9fb5;
 }
 .theme-base-0d .content a,
 .theme-base-0d .related-posts li a:hover {
-  color: #406979;
+  color: #6a9fb5;
 }
 
 /* Magenta */
