@@ -46,6 +46,9 @@ Sometimes a video can be better to explain your ideas or products, here goes som
   - [studio.stupeflix.com](https://studio.stupeflix.com/)
   - [wideo.co](http://wideo.co/)
 
+## Free icons
+  - [flaticon.com](http://www.flaticon.com/)
+
 ## Free timelapses videos
 
   - [videos.pexels.com](https://videos.pexels.com/)
@@ -76,3 +79,6 @@ Sometimes a video can be better to explain your ideas or products, here goes som
   - [www.iconfinder.com](http://www.iconfinder.com): icon database (not free).
   - [picapp.net](http://picapp.net/htc_one_m8_gunmetal_2): Generate screens of your site in several devices.
   - [lipis.github.io/bootstrap-social](http://lipis.github.io/bootstrap-social): Social Sign-In Buttons made in pure CSS based on Bootstrap and Font Awesome.
+
+## Inspirations
+  - [onepagelove.com](https://onepagelove.com)
