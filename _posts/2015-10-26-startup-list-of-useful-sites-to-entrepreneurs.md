@@ -66,6 +66,11 @@ Sometimes a video can be better to explain your ideas or products, here goes som
   - [startbootstrap.com](http://startbootstrap.com): Start Bootstrap is a library of free to download Bootstrap 3 themes and templates.
   - [bootstrapzero.com](http://www.bootstrapzero.com/): Curated open source themes for booststrap.
   - [bootswatch.com](https://bootswatch.com/): Free themes for bootstrap.
+  - [bootstrapmade.com](https://bootstrapmade.com): Premium Bootstrap Themes & Templates.
+  - [bootstrapious.com/free-templates](http://bootstrapious.com/free-templates): Free bootstrap templates.
+  - [themewagon.com/themes](https://themewagon.com/themes): Bootstrap Themes & HTML5 Templates.
+  - [templatemag.com/free-bootstrap-templates](https://templatemag.com/free-bootstrap-templates): Free Bootstrap HTML Templates.
+  - [bootstraptaste.com](https://bootstraptaste.com): yet another free bootstrap template site.
 
 ## Testing your site
   - [webpagetest.org](http://www.webpagetest.org): Test the performance of your site.
