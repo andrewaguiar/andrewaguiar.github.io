@@ -4,33 +4,23 @@ title: Projects
 image: wood-architect-table-work
 ---
 
-## VimCasar - [vimcasar.com.br](http://www.vimcasar.com.br)
+## DiaDiaZen - [diadiazen.com](http://www.diadiazen.com)
 
-VimCasar is an wedding site, gifts registration and rsvp to couples.
+DiaDiaZen is a personal TODO list focused in simplicity and usability.
 
 Technology stack
 
   - [Ruby on Rails](http://rubyonrails.org) as backend
   - [Git](https://git-scm.com) as SCM hosted in [Bitbucket](https://bitbucket.org)
   - [Heroku](https://www.heroku.com)
+  - [Memcached] as cache database
   - [Postgresql](http://www.postgresql.org) as relational database
   - [Bootstrap](http://getbootstrap.com) as html5 framework
+  - [React.js]
 
-## ZenTrip - [zentrip.com.br](http://www.zentrip.com.br)
+## eJurista - [ejurista.com](http://www.ejurista.com)
 
-Zen Trip is a web application (mobile friendly) to help people organize their travels, registering costs, places to visit and details.
-
-Technology stack
-
-  - [Ruby on Rails](http://rubyonrails.org) as backend
-  - [Git](https://git-scm.com) as SCM hosted in [Bitbucket](https://bitbucket.org)
-  - [Heroku](https://www.heroku.com)
-  - [Postgresql](http://www.postgresql.org) as relational database
-  - [Bootstrap](http://getbootstrap.com) as HTML5 framework
-
-## Brow - [brow.io](http://www.brow.io)
-
-Brow is a tool to help unemployed people to search jobs performing job positions in several sites and allowing friends and colleges to help them.
+eJurista is a tool (CRM) to help lawyers to run their offices.
 
 Technology stack
 
@@ -39,7 +29,8 @@ Technology stack
   - [Heroku](https://www.heroku.com)
   - [Postgresql](http://www.postgresql.org) as relational database
   - [Bootstrap](http://getbootstrap.com) as HTML5 framework
-  - [Redis](http://redis.io/) as searching results cache.
+  - [Memcached] as cache database
+  - [S3] to store files
 
 ## bovespa-prices - [rubygems.org/gems/bovespa-prices](https://rubygems.org/gems/bovespa-prices)
 
