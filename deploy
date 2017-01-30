@@ -1,4 +1,4 @@
 #!/bin/bash
 
-git push origin master
+git add . && git commit -i && git push origin master
 
