@@ -36,8 +36,9 @@ comments: false
 
 baseurl: '/'
 
-gems:
+plugins:
   - jekyll-redirect-from
+  - jekyll-paginate
 
 compress_html:
   clippings: [all]
