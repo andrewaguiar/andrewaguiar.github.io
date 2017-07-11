@@ -4,8 +4,6 @@ title: "Ruby - Understanding method_missing"
 image: "binocular-telescope"
 ---
 
-## 
-
 Everytime you call a method in a ruby object ruby tries to find this method definition in all hierarchy, 
 for example calling the `to_s` method of ``Fixnum`` makes ruby to search it in ``Fixnum`` and ``Object``.
 In case of ruby doesn't find the method it will be caught by [method_missing](http://ruby-doc.org/core-2.1.0/BasicObject.html#method-i-method_missing) method declared in ``BasicObject``.

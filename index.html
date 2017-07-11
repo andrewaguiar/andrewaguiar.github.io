@@ -2,22 +2,30 @@
 layout: default
 title: Home
 ---
-
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-    {% comment %}
-    {{ post.content }}
-    {% endcomment %}
+<div class='about'>
+  <div class='avatar'>
+    <img class='img-responsive img-circle' src='https://avatars3.githubusercontent.com/u/141706?v=3&s=460'/>
+    <h1 class='text-center'>ANDREW S AGUIAR</h1>
+    <ul>
+      <li><a href="{{ site.github.url }}">Github</a> . </li>
+      <li><a href="{{ site.linkedin.url }}">Linkedin</a></li>
+    </ul>
   </div>
-  {% endfor %}
+  <hr/>
+  <p class='lead'>I've been working as a software developer since 2006 and as a software development 
+  instructor since 2014. My specialties include Java, Ruby, web development and Solr.</p>
 </div>
+
+
+<h2>Posts</h2>
+<ul>
+  {% for post in paginator.posts %}
+  <li>
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <small>{{ post.date | date_to_string }}</small>
+  </li>
+  {% endfor %}
+</ul>
 {% comment %}
 <div class="pagination">
   {% if paginator.next_page %}
