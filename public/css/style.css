@@ -2,9 +2,16 @@ body {
   background-color: #f7f7f7;
   color: #333333;
   line-height: 38px;
-  font-size: 1.30em;
   font-family: sans-serif;
   font-weight: 100;
+  font-size: 1em;
+  word-wrap: break-word;
+}
+
+@media (min-width: 660px) {
+body {
+  font-size: 1.30em;
+}
 }
 
 .container {
@@ -63,6 +70,13 @@ h3 {
   padding: 2%;
   overflow: scroll;
 }
+
+@media (max-width: 659px) {
+.highlight {
+  font-size: 0.8em;
+}
+}
+
 
 .highlight code span {
   font-size: 1em;
@@ -134,3 +148,8 @@ h3 {
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
+.fb_iframe_widget,
+.fb_iframe_widget iframe {
+  max-width: 100%;
+  overflow: hidden;
+}
