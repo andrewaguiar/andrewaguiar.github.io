@@ -2,8 +2,7 @@ body {
   background-color: #f7f7f7;
   color: #000000;
   line-height: 38px;
-  font-family: sans-serif;
-  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   word-wrap: break-word;
 }
@@ -22,7 +21,7 @@ body {
 }
 .about h1 {
   font-size: 2em;
-  font-family: serif;
+  font-family: 'Roboto Slab', serif;
   text-align: center;
   text-transform: uppercase;
 }
