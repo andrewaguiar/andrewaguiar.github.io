@@ -54,6 +54,10 @@ h3 {
   background-color: #272822;
   color: #f7f7f7;
 }
+code.highlighter-rouge {
+  padding: 1px 6px;
+  border-radius: 3px;
+}
 .highlight {
   line-height: 30px;
   padding: 2%;
