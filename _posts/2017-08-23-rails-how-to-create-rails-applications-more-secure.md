@@ -281,6 +281,66 @@ end
 ```
 
 ## Use a throttling system to prevent DoS / DDoS attacks
+Another kind of attack very popular nowadays is the DoS (Deny of Service), and his variant (Distributed Deny of Service),
+in this attack the aggressor tries to flood your application with requests causing your server stop responding legit users
+because it is too busy responding the fake requests.
+
+The difference between DoS and DDoS is the distributed factor, a DDoS attack is harder (sometimes almost impossible) to defend
+yourself against due the attacker uses serveral clients to perform the attack.
+
+In rails you can try to mitigate this kind of attack using a gem called [rack-attack](https://github.com/kickstarter/rack-attack).
+Rack-attack is a middleware that allow you to define rules about accesses, you can for instance block IPs based on blacklists
+
+```ruby
+Rack::Attack.blocklist('block 1.2.3.4') do |req|
+# Requests are blocked if the return value is truthy
+'1.2.3.4' == req.ip
+end
+```
+
+Block based on User Agent (not so useful in my opnion due it is easy to fake).
+
+```ruby
+# Block logins from a bad user agent
+Rack::Attack.blocklist('block bad UA logins') do |req|
+  req.path == '/login' && req.post? && req.user_agent == 'BadUA'
+end
+```
+
+You can also allow block everyone and only allow based in a whitelist.
+
+```ruby
+# Always allow requests from localhost (blocklist & throttles are skipped)
+Rack::Attack.safelist('allow from localhost') do |req|
+  # Requests are allowed if the return value is truthy
+  '127.0.0.1' == req.ip || '::1' == req.ip
+end
+```
+
+Another feature rake-attack provides to us (and I think the most useful) is the throttling, you can using it
+to limit how many requests can be made based on a key, the key generally is the client's IP
+
+Example:
+```ruby
+# Throttle requests to 5 requests per second per ip
+Rack::Attack.throttle('req/ip', limit: 5, period: 1.second) do |req|
+  req.ip
+end
+```
+
+The rule above says an IP can only perform 5 requests per second. Another useful rule would be:
+
+```ruby
+Rack::Attack.throttle('logins/email', limit: 5, period: 60.seconds) do |req|
+  req.params['email'] if req.path == '/login' && req.post?
+end
+```
+
+In this case we are limiting harder when the client tries attempts sign in, so in this case we are limiting in 5 in a
+1 minute period, to specify the sign in we use the `req.path == '/login'` and the `req.post?` test.
+
+It is a good practice to throttle the sign in process as we generally will be using a bcrypt / scrypt algorithm to hash the
+password and these algorithms spend some time to run, so an attacker could use this as the perform a DoS.
 
 ## Use bcrypt or scrypt to generate password hashes
 
