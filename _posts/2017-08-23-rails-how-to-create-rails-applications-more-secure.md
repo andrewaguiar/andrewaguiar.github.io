@@ -346,7 +346,27 @@ password and these algorithms spend some time to run, so an attacker could use t
 
 ## Set the security headers properly
 
+The mordern browsers support some especial response headers designed to bring more secure to your application
+
+  - **Strict-Transport-Security**:
+  - **X-XSS-Protection**:
+  - **X-Frame-Options**:
+  - **X-Content-Type-Options**:
+  - **Content-Security-Policy**:
+  - **Public-Key-Pins**:
+  - **Referrer-Policy**:
+
+A good tool to verify whether your site implements these headers properly or not is the [https://securityheaders.io](securityheaders.io),
+you can scan any site and receive an score and also tips about each header.
+
 ## Use a vulnerability scanner to test your application periodicaly
+
+Security is very important not only in the beginning of the development but in the whole software life cycle as well. It is helpful to
+have a service to verify any possible vulnerability and alarm you as soon as any breach is discovered.
+
+For this task I have used [https://gauntlet.io/](https://gauntlet.io/), Gauntlet runs a set of security scanners against your applications
+and shows you any issue. The tool is really useful and for small applications they have a free plan (though the paid plans are not so expensive
+and worthies every dollar).
 
 ## Conclusion
 
