@@ -110,7 +110,9 @@ software used can be a point of failure as well, so take care of your OS, databa
 ## Use HTTPS everywhere
 
 Http is a text protocol, so anyone sniffing your network traffic is able to read the content of the http comunication, for this
-reason you must use https in every endpoint in your site in production. Some people think only critical places like checkout, payment,
+reason you must use https in every endpoint in your site in production.
+
+Some people think only critical places like checkout, payment,
 sign in / up endpoints should be accessed by https, but if you have any respect for the clients information you should use it in any url.
 You never know what kind of information your client is writing in your application and which are confidential or not, so treat any client
 data as confidential.
@@ -123,7 +125,7 @@ free https. They also have good cache and DDoS mitigation solutions in the paid 
 
 It is not difficult to write secure code in rails, but anyway I use and recommend using an static code analyzer 
 focused in security.
-[Brakeman](https://github.com/presidentbeef/brakeman) scans your code for any security vulnerability and should
+[Brakeman](https://github.com/presidentbeef/brakeman) gem scans your code for any security vulnerability and should
 be run after each code change as a CI process.
 
 To install just add brakeman in your Gemfile.
