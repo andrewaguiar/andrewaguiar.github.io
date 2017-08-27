@@ -104,6 +104,18 @@ Solution: upgrade to ~> 2.3.18, ~> 3.1.12, >= 3.2.13
 Bundler-audit keeps your gems updated but remember your application is not only your code and your gems, any other
 software used can be a point of failure as well, so take care of your OS, database and any other piece of software used.
 
+## Use HTTPS everywhere
+
+Http is a text protocol, so anyone sniffing your network traffic is able to read the content of the http comunication, for this
+reason you must use https in every endpoint in your site in production. Some people think only critical places like checkout, payment,
+sign in / up endpoints should be accessed by https, but if you have any respect for the clients information you should use it in any url.
+You never know what kind of information your client is writing in your application and which are confidential or not, so treat any client
+data as confidential.
+
+If you don't want to spend money in a SSL certificate [https://letsencrypt.org](https://letsencrypt.org) gives you for free. Another solution
+I personally use is [https://www.cloudflare.com](https://www.cloudflare.com), you just configure your DNS entries there and they provide you
+free https. They also have good cache and DDoS mitigation solutions in the paid plans.
+
 ## Use an static code analyzer
 
 It is not difficult to write secure code in rails, but anyway I use and recommend using an static code analyzer 
@@ -346,7 +358,7 @@ password and these algorithms spend some time to run, so an attacker could use t
 
 ## Set the security headers properly
 
-The mordern browsers support some especial response headers designed to bring more secure to your application
+The modern browsers support some especial response headers designed to bring more secure to your application
 
   - **Strict-Transport-Security**:
   - **X-XSS-Protection**:
@@ -356,7 +368,7 @@ The mordern browsers support some especial response headers designed to bring mo
   - **Public-Key-Pins**:
   - **Referrer-Policy**:
 
-A good tool to verify whether your site implements these headers properly or not is the [https://securityheaders.io](securityheaders.io),
+A good tool to verify whether your site implements these headers properly or not is the [https://securityheaders.io](https://securityheaders.io),
 you can scan any site and receive an score and also tips about each header.
 
 ## Use a vulnerability scanner to test your application periodicaly
@@ -368,6 +380,16 @@ For this task I have used [https://gauntlet.io/](https://gauntlet.io/), Gauntlet
 and shows you any issue. The tool is really useful and for small applications they have a free plan (though the paid plans are not so expensive
 and worthies every dollar).
 
-## Conclusion
-
 ## References
+
+  - [guides.rubyonrails.org/security.html](http://guides.rubyonrails.org/security.html): Rails guides about security.
+  - [github.com/rubysec/bundler-audit](https://github.com/rubysec/bundler-audit): Audits your Gemfile.lock and scan it for known security issues.
+  - [github.com/presidentbeef/brakeman](https://github.com/presidentbeef/brakeman): Scans your code for any security vulnerability.
+  - [github.com/kickstarter/rack-attack](https://github.com/kickstarter/rack-attack): Implements black lists, white lists and throttling in your
+  application, (usefull against DoS and DDoS attacks).
+  - [github.com/plataformatec/devise](https://github.com/plataformatec/devise): Complete and very mature solution to deal with authentication,
+  OmniAuth, lockable accounts and password recovering.
+  - [securityheaders.io](https://securityheaders.io): Scans your site and verifies all security headers.
+  - [gauntlet.io](https://gauntlet.io/): Scans your application using multiple vulnerability scanners and present all breaches and bad potential
+  security failures.
+
