@@ -395,7 +395,7 @@ and worthies every dollar).
 
 ## Checklist
 
-  - Always update your gems / databases / Operational System and etc.
+  - Always update your gems / databases / operational system and etc.
   - Use [bundler-audit](https://github.com/rubysec/bundler-audit) to discovery security issues in your gems.
   - Use [brakeman](https://github.com/presidentbeef/brakeman) to ensure your code is secure (add it in the CI flow).
   - Use [rack-attack](https://github.com/kickstarter/rack-attack) or a service to defend yourself against DDoS attacks (
