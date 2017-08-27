@@ -239,11 +239,66 @@ is the [SQLMap](http://sqlmap.org)). This sql injection frameworks support sever
 life cycle like discovering tables, discovering system tables, dumping data and even trying to execute command line in the OS
 directly.
 
-## Use bcrypt or scrypt to generate password hashes
-
 ## Consider using Devise to deal with user authentication / registration flow
 
-## Lock users account after X failed sign in attempts
+Most of web applications requires the user to sign up to use their features, also once signed up the user needs to sign in 
+(generally using a username / email and a password). This sign in / up process by itself is not that simple as some people
+think, there lots of details and possible security issues that could be involved for instance:
+
+  - How to store user passwords properly.
+  - How to avoid brute force attacks (when a hacker knows the username / email and tries every possible combination of characters
+  as the user's password).
+  - How to avoid dictionary attacks (similar with brute force, but here the attacker generates passwords based on dictionaries of
+  words and generally this dictionary is customized with victims informations example: parents names, surnames, phones, pets,
+  birthday and etc.
+
+If you want to create your own implementation of authentication you will need to think about all the security points above, or
+you can simply use the [devise](https://github.com/plataformatec/devise) gem.
+
+[Devise](https://github.com/plataformatec/devise) is a complete solution to authentication in rails, very popular and very well
+tested. Also it implements all good practices in terms of security.
+
+### Store passwords properly
+
+Passwords (in my opinion) are the most critial information you are going to store in your database, lots of people uses the same
+password in several websites and services so when passwords are stolen from your site it can impact any other services used by the
+user. So it is important to store them properly. The correct way to store passwords is:
+
+  - Get the user password
+  - Convert it to a irreversible hash (use bcrypt or scrypt) always applying a salt to the password
+  - Store it in the database
+
+Never use MD5 / SHA1 algorithms to generate the hash, first they are extremelly fast algorithms so the hacker can perform brute force
+very easily, second they dont have salt by itself so an attacker after discovering a MD5 hashed password could use
+[Rainbow tables](https://en.wikipedia.org/wiki/Rainbow_table) (reverse tables with MD5 hashes as keys and the raw password as values)
+to discovery the password (there are lots of collaborative rainbow tables like [Hashkiller](https://hashkiller.co.uk/md5-decrypter.aspx)).
+
+Bcrypt and scrypt don't have these flaws, they work using the concepts of rounds, you can configure them to use for instance 12 rounds and
+decrease the speed of calculation, this way if a hacker wants to use brute force attacks, or dictionaries attacks he will spend so much
+time in each attempt that it will be impracticable.
+
+```ruby
+puts Benchmark.measure { 100.times { |n| BCrypt::Password.create("attempt-#{n}", cost: 12) } }
+# 25.460000   0.060000  25.520000 ( 25.598915)
+```
+
+In the example above (in my Mac OS 2.7 GHz Intel Core i5) it took 25 seconds to attempt 100 different passwords using 12 as cost. As a
+caveat you should be ware of the cost as it can impact the performance and user experience (setting cost like 20 tooks for instance 65 seconds
+to complete) and also could be used by hackers as a DoS source (One can just try several wrong passwords and flood your servers as requests 
+are going to be stopped in the bcrypt hash generation), to mitigate this see the throttling section in this same article.
+
+So now you already know how to hash passwords you can simply start using the [github.com/codahale/bcrypt-ruby](https://github.com/codahale/bcrypt-ruby)
+or [github.com/pbhogan/scrypt](https://github.com/pbhogan/scrypt) gem in rails, the good news is using devise you are already using it,
+devise uses bcrypt and the only thing you need to worry about is how to configure it properly.
+
+When you install devise it creates a `config/initializers/devise.rb` file to you, by default devise sets the rounds as 1 for test enviroment
+(so your tests will not be slowed down and 12 to other enviroments). In my experience 12 is a good value and there is no need to change it.
+
+```ruby
+config.stretches = Rails.env.test? ? 1 : 12
+```
+
+### Lock users account after X failed sign in attempts
 
 Another very common attack is the brute force attack (generally based on dictionaries), in this attack the bad guy knows the
 username, email of the user and tries to guess the password. He can guess purely using brute force (testing every possibility)
@@ -258,7 +313,7 @@ By the way the users registration, sign in, sign up, sign out by itself seems to
 several points you need to provide (lock/unlock, password management, reset password) and all this code can lead to more
 vulnerabilities.
 
-Using rails I recommend using [Devise](https://github.com/plataformatec/devise), devise deals with all aspects of users flow like
+Using rails I recommend using [devise](https://github.com/plataformatec/devise), devise deals with all aspects of users flow like
 signing in/up/out account editing, locking, OmniAuth, password reset and etc.
 
 To implement account locking in devise simply put `devise :lockable`, also you need to configure locking parameters like, max of
