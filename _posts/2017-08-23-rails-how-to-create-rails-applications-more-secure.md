@@ -4,6 +4,8 @@ title: "Rails - How to create rails applications more secure"
 image: "closed"
 ---
 
+## Introduction
+
 Setting up a rails application is not that difficult nowadays, indeed spending no more than 1 hour you are able to
 create a basic (and well structured) scaffold of a basic app.
 
@@ -109,7 +111,7 @@ software used can be a point of failure as well, so take care of your OS, databa
 
 ## Use HTTPS everywhere
 
-Http is a text protocol, so anyone sniffing your network traffic is able to read the content of the http comunication, for this
+Http is a text protocol, so anyone sniffing your network traffic is able to read the content of the http communication, for this
 reason you must use https in every endpoint in your site in production.
 
 Some people think only critical places like checkout, payment,
@@ -117,8 +119,8 @@ sign in / up endpoints should be accessed by https, but if you have any respect 
 You never know what kind of information your client is writing in your application and which are confidential or not, so treat any client
 data as confidential.
 
-If you don't want to spend money in a SSL certificate [https://letsencrypt.org](https://letsencrypt.org) gives you for free. Another solution
-I personally use is [https://www.cloudflare.com](https://www.cloudflare.com), you just configure your DNS entries there and they provide you
+If you don't want to spend money in a SSL certificate [letsencrypt.org](https://letsencrypt.org) gives you for free. Another solution
+I use is [www.cloudflare.com](https://www.cloudflare.com), you just configure your DNS entries there and they provide you
 free https. They also have good cache and DDoS mitigation solutions in the paid plans.
 
 ## Use an static code analyzer
@@ -191,7 +193,7 @@ rails already injects as a hidden input automatically.
 
 ## Be careful with XSS
 
-XSS (Cross Site Scripting) happens when a attacker successfuly injects some code (javascript, css, html) in the application
+XSS (Cross Site Scripting) happens when a attacker successfully injects some code (javascript, css, html) in the application
 and this code is shown after (generally posts, comments and etc). A very common and classic javascript injection could be.
 (there is even a professional framework to exploit XSS vulnerabilities called [Beef](http://beefproject.com)).
 
@@ -233,7 +235,7 @@ SELECT * FROM "users" WHERE (email = 'email' and encrypted_password = '' or 1=1 
 ```
 
 This example above is very silly, in the real life an attacker would use a sql injection exploitation framework (the most famous
-is the [SQLMap](http://sqlmap.org)). This sql injection frameworks support several databases and automatizes all the attack
+is the [SQLMap](http://sqlmap.org)). This sql injection frameworks support several databases and automates all the attack
 life cycle like discovering tables, discovering system tables, dumping data and even trying to execute command line in the OS
 directly.
 
@@ -379,17 +381,31 @@ The modern browsers support some especial response headers designed to bring mor
   - **Public-Key-Pins**:
   - **Referrer-Policy**:
 
-A good tool to verify whether your site implements these headers properly or not is the [https://securityheaders.io](https://securityheaders.io),
+A good tool to verify whether your site implements these headers properly or not is the [securityheaders.io](https://securityheaders.io),
 you can scan any site and receive an score and also tips about each header.
 
-## Use a vulnerability scanner to test your application periodicaly
+## Use a vulnerability scanner to test your application periodically
 
 Security is very important not only in the beginning of the development but in the whole software life cycle as well. It is helpful to
 have a service to verify any possible vulnerability and alarm you as soon as any breach is discovered.
 
-For this task I have used [https://gauntlet.io](https://gauntlet.io), Gauntlet runs a set of security scanners against your applications
+For this task I have used [gauntlet.io](https://gauntlet.io), Gauntlet runs a set of security scanners against your applications
 and shows you any issue. The tool is really useful and for small applications they have a free plan (though the paid plans are not so expensive
 and worthies every dollar).
+
+## Checklist
+
+  - Always update your gems / databases / Operational System and etc.
+  - Use [bundler-audit](https://github.com/rubysec/bundler-audit) to discovery security issues in your gems.
+  - Use [brakeman](https://github.com/presidentbeef/brakeman) to ensure your code is secure (add it in the CI flow).
+  - Use [rack-attack](https://github.com/kickstarter/rack-attack) or a service to defend yourself against DDoS attacks (
+  [www.cloudflare.com](https://www.cloudflare.com), [aws.amazon.com/pt/shield](https://aws.amazon.com/pt/shield) as examples).
+  - Use HTTPS everywhere ([letsencrypt.org](https://letsencrypt.org) and [www.cloudflare.com](https://www.cloudflare.com) give
+  you free SSL).
+  - Use devise to implement the user registration and authentication feature, devise is very used and well proved so it is not
+  necessary reinvent the well, also lots of security issues were already fixed.
+  - Use the Http security headers, it is not difficult and times spending (checks your site using [securityheaders.io](https://securityheaders.io))
+  - Configure a vulnerabilities scanner to always analyze your application ([gauntlet.io](https://gauntlet.io/) is free for 1 scan per month)
 
 ## References
 
