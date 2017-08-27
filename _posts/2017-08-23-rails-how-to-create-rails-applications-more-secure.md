@@ -426,18 +426,21 @@ password and these algorithms spend some time to run, so an attacker could use t
 
 ## Set the security headers properly
 
-The modern browsers support some especial response headers designed to bring more secure to your application
+The modern browsers support some especial response headers designed to bring more secure to your application:
 
-  - **Strict-Transport-Security**:
-  - **X-XSS-Protection**:
-  - **X-Frame-Options**:
-  - **X-Content-Type-Options**:
-  - **Content-Security-Policy**:
-  - **Public-Key-Pins**:
-  - **Referrer-Policy**:
+  - **Strict-Transport-Security**: Declares to webbrowsers and other clients that only HTTPS is accepted.
+  - **X-XSS-Protection**: Enables the cross-site scripting filters built in the most browsers (the browser is going to get rid of any
+  potential injected content).
+  - **X-Frame-Options**: Prevents your site can be framed in other sites, prevents against clickjacking.
+  - **Content-Security-Policy**: White lists sources of approved contents (generally javascript codes), prevents XSS attacks.
+  - **Public-Key-Pins**: Deny the browser to accept rogue X.509 certificates, the browser will accept certificates only from
+  specified identities.
+  that the browser should trust, your users are protected in the event a certificate authority is compromised
 
 A good tool to verify whether your site implements these headers properly or not is the [securityheaders.io](https://securityheaders.io),
-you can scan any site and receive an score and also tips about each header.
+you can scan any site and receive an score and also tips about each header (totally free).
+
+Also to implement this headers easily you can use [github.com/twitter/secureheaders](https://github.com/twitter/secureheaders) gem.
 
 ## Use a vulnerability scanner to test your application periodically
 
