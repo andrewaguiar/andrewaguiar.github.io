@@ -23,10 +23,12 @@ they are confidentiality, integrity and availability as known as CIA triad.
 ![cia triad](/public/images/posts/2017-08-16-rails/cia.png)
 
 ### Confidentiality
+
 Confidentiality is about protect the data from unauthorized access, private data is valuable for hackers as they
 can be sold in the black market (spam list, passwords) or even used to blackmail the company in some cases.
 
 ### Integrity
+
 Integrity is data correctness, attackers can perform attacks to corrupt the data and paralyze the operation in
 order to simply cause damage or demand a ransom.
 
@@ -34,6 +36,7 @@ A very common attack against integrity is a ransomware attack. In this case a ma
 all files and requires a key to recovery them, generally the criminal demands a payment (in bitcoins) to send the key.
 
 ### Availability
+
 Availability is the capacity of your web application to stay online and serving your users in a satisfactory way. Attacks
 against this pillar focus on shutdown the service or slow it down in order to deny the user's usage.
 
@@ -185,6 +188,7 @@ rails form or link helpers (`form_for`, `form_tag`, `link_to method: method`) yo
 rails already injects as a hidden input automatically.
 
 ## Be careful with XSS
+
 XSS (Cross Site Scripting) happens when a attacker successfuly injects some code (javascript, css, html) in the application
 and this code is shown after (generally posts, comments and etc). A very common and classic javascript injection could be.
 (there is even a professional framework to exploit XSS vulnerabilities called [Beef](http://beefproject.com)).
@@ -206,6 +210,7 @@ cause the browser try to detect and block some potential XSS attacks (the browse
 the attack).
 
 ## Be careful with SQL Injection
+
 SQL Injection has the same principe of other injection attacks, but instead of injecting code to be rendered in the front-end
 sql injection attacks aim in the database, depending on how you have created your queries (if you simply concatenated strings
 with the user's inputed parameters) a hacker can inject some code and modify the original command.
@@ -230,7 +235,12 @@ is the [SQLMap](http://sqlmap.org)). This sql injection frameworks support sever
 life cycle like discovering tables, discovering system tables, dumping data and even trying to execute command line in the OS
 directly.
 
+## Use bcrypt or scrypt to generate password hashes
+
+## Consider using Devise to deal with user authentication / registration flow
+
 ## Lock users account after X failed sign in attempts
+
 Another very common attack is the brute force attack (generally based on dictionaries), in this attack the bad guy knows the
 username, email of the user and tries to guess the password. He can guess purely using brute force (testing every possibility)
 or most common doing a dictionary attack (gathering information about the user and creating a dictionary customized to the
@@ -293,6 +303,7 @@ end
 ```
 
 ## Use a throttling system to prevent DoS / DDoS attacks
+
 Another kind of attack very popular nowadays is the DoS (Deny of Service), and his variant (Distributed Deny of Service),
 in this attack the aggressor tries to flood your application with requests causing your server stop responding legit users
 because it is too busy responding the fake requests.
@@ -300,7 +311,7 @@ because it is too busy responding the fake requests.
 The difference between DoS and DDoS is the distributed factor, a DDoS attack is harder (sometimes almost impossible) to defend
 yourself against, due the attacker uses several clients to perform the attack.
 
-In rails you can try to mitigate this kind of attack using a gem called [rack-attack](https://github.com/kickstarter/rack-attack).
+In rails you can try to mitigate this kind of attack using the [rack-attack](https://github.com/kickstarter/rack-attack) gem.
 Rack-attack is a middleware that allow you to define rules about accesses, you can for instance block IPs based on black lists
 
 ```ruby
@@ -354,8 +365,6 @@ In this case we are limiting harder when the client tries attempts sign in, so i
 It is a good practice to throttle the sign in process as we generally will be using a bcrypt / scrypt algorithm to hash the
 password and these algorithms spend some time to run, so an attacker could use this as the perform a DoS.
 
-## Use bcrypt or scrypt to generate password hashes
-
 ## Set the security headers properly
 
 The modern browsers support some especial response headers designed to bring more secure to your application
@@ -376,7 +385,7 @@ you can scan any site and receive an score and also tips about each header.
 Security is very important not only in the beginning of the development but in the whole software life cycle as well. It is helpful to
 have a service to verify any possible vulnerability and alarm you as soon as any breach is discovered.
 
-For this task I have used [https://gauntlet.io/](https://gauntlet.io/), Gauntlet runs a set of security scanners against your applications
+For this task I have used [https://gauntlet.io](https://gauntlet.io), Gauntlet runs a set of security scanners against your applications
 and shows you any issue. The tool is really useful and for small applications they have a free plan (though the paid plans are not so expensive
 and worthies every dollar).
 
