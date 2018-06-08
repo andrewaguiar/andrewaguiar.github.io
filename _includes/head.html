@@ -23,4 +23,9 @@
   {% include style.html %}
   <link rel="shortcut icon" href="/public/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+  <script>
+    if (document.location.protocol == 'http:') {
+      document.location.href = document.location.href.replace('http:', 'https:')
+    }
+  </script>
 </head>

@@ -13,9 +13,9 @@ title:            'Andrew Aguiar'
 tagline:          'Software developer'
 description:      'Software developer and development instructor'
 
-url:             http://www.andrewsaguiar.com/
-url_pure:        http://www.andrewsaguiar.com
-assets_base_url: http://www.andrewsaguiar.com/assets/
+url:             https://www.andrewsaguiar.com/
+url_pure:        https://www.andrewsaguiar.com
+assets_base_url: https://www.andrewsaguiar.com/assets/
 
 author:
   name:           'Andrew S Aguiar'
