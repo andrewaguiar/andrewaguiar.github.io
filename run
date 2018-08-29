@@ -1,1 +1,1 @@
-jekyll server --verbose
+bundle exec jekyll server --verbose
