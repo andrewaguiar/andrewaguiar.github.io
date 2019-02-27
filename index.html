@@ -23,3 +23,17 @@ title: Home
     <a href='https://www.youtube.com/channel/UC19WrTt6WTRie64L3QopMVw?view_as=subscriber' class='social-link'>Youtube</a>
     channel and read some <a href='/posts'>Posts</a> I've written here as well.</p>
 </div>
+
+<h1>Posts</h1>
+<ul class='unstyled-list'>
+  {% for post in paginator.posts %}
+    <li>
+      <h3>
+        <a href='{{ post.url }}'>
+          {{ post.title }}
+        </a>
+      </h3>
+      <small>{{ post.date | date_to_string }}</small>
+    </li>
+  {% endfor %}
+</ul>
