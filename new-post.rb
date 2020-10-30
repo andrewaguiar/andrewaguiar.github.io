@@ -19,4 +19,4 @@ image: "closed"
 
 CONTENT
 
-File.write("#{d}-#{parameterize(ARGV[0])}.md", content)
+File.write("_posts/#{d}-#{parameterize(ARGV[0])}.md", content)
