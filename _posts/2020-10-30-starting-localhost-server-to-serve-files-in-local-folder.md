@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Starting localhost server from folder"
+title: "Starting localhost server to serve files in local folder"
 image: "clock"
 ---
 
