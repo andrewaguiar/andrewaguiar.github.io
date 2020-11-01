@@ -75,7 +75,7 @@ end
 
 In `parse_args` function we use `OptionParser` to parse some arguments (using full version and aliases).
 
-```
+```elixir
   defp parse_args(args) do
     switches = [regex: :boolean]
 
@@ -87,7 +87,7 @@ In `parse_args` function we use `OptionParser` to parse some arguments (using fu
 
 After parsing args we send it to run and in case of success we run the program itself, otherwise we show instructions.
 
-```
+```elixir
 term = %Rpx.Term{value: term_string, regex: args_config[:regex] != nil}
 
 all_files = Searcher.find()
