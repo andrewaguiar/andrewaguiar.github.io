@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Elixir - Making a command line tool in elixir"
+title: "CLI Tool - RPX an easy to use and intuitive string replacer"
 image: "closed"
 ---
 
