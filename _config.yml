@@ -21,7 +21,7 @@ author:
   name:           'Andrew S Aguiar'
   url:            https://br.linkedin.com/in/andrewaguiar
 
-paginate:         999
+paginate:         20
 
 # Custom vars
 version:          2.1.0
