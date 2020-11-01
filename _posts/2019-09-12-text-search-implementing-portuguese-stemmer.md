@@ -427,6 +427,6 @@ end
 
 ## More info
 
-  - http://www.inf.ufrgs.br/~viviane/rslp/index.htm
-  - https://www.kaggle.com/nltkdata/rslp-stemmer
+  - [www.inf.ufrgs.br/~viviane/rslp/index.htm](http://www.inf.ufrgs.br/~viviane/rslp/index.htm)
+  - [www.kaggle.com/nltkdata/rslp-stemmer](https://www.kaggle.com/nltkdata/rslp-stemmer)
 
