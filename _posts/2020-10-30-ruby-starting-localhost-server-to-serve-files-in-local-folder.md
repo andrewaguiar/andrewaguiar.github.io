@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Starting localhost server to serve files in local folder"
+title: "Ruby - Starting localhost server to serve files in local folder"
 image: "clock"
 ---
 
