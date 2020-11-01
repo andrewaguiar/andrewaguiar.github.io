@@ -17,6 +17,7 @@ In my case for example I don't have any great skill for chose color palettes, al
 
 When you create a site it is dificult to find good free images with good resolution, here goes a list of some sites where you can get some photos.
 
+  - [undraw.co](https://undraw.co)
   - [jaymantri.com](http://jaymantri.com/)
   - [snapwiresnaps.tumblr.com](http://snapwiresnaps.tumblr.com/)
   - [freeimages.com](http://www.freeimages.com/)
@@ -71,6 +72,10 @@ Sometimes a video can be better to explain your ideas or products, here goes som
   - [themewagon.com/themes](https://themewagon.com/themes): Bootstrap Themes & HTML5 Templates.
   - [templatemag.com/free-bootstrap-templates](https://templatemag.com/free-bootstrap-templates): Free Bootstrap HTML Templates.
   - [bootstraptaste.com](https://bootstraptaste.com): yet another free bootstrap template site.
+
+## Community
+
+  - [www.indiehackers.com](https://www.indiehackers.com/)
 
 ## Testing your site
   - [webpagetest.org](http://www.webpagetest.org): Test the performance of your site.
