@@ -5,7 +5,7 @@ image: "capybaha"
 ---
 
 Text searching is a very interesting subject that I started studing in a sporadically way since I worked with
-[lucene.apache.org/solr/](https://lucene.apache.org/solr/) in [elo7.com.br](https://www.elo7.com.br) 
+[Apache Solr](https://lucene.apache.org/solr/) in [Elo7](https://www.elo7.com.br).
 
 Among all steps of the textual search in Solr the one that I thought was the coolest was the removal of world stem. Given
 a world like `sapatinhos` (little shoes in portuguese) we want to:
@@ -22,8 +22,7 @@ stemming is very language dependent.
 For portuguese we can use the following algorithm written by Viviane Moreira Orengo and Christian Huyck
 [www.inf.ufrgs.br/~viviane/rslp/index.htm](http://www.inf.ufrgs.br/~viviane/rslp/index.htm)
 
-This algorithm works by applying a sequence of rules in the world, 
-
+This algorithm works by applying a sequence of reductions in the word
 
 ```ruby
 plural_reduction if ends_with('s')
@@ -35,8 +34,9 @@ verb_suffix_reduction if noun_suffix_reduction_changed_nothing
 vowel_removal if verb_suffix_reduction_changed_nothing
 ```
 
-Each step applies the rules set related, a rule is an array with `ending`, `min_suffix_length`, `replacement` and `exceptions`.
-Lets take the word `canais` and apply the `plural_reduction`
+Each reduction applies the rules set related, a rule is an array with `ending`, `min_suffix_length`, `replacement` and `exceptions`.
+
+Lets take the word `canais` and apply the `plural_reduction`.
 
 ```
   def plural_reduction
@@ -56,9 +56,10 @@ Lets take the word `canais` and apply the `plural_reduction`
   end
 ```
 
-It will match `['ais', '1', 'al', 'cais,mais']` as it ends with `ais` and replace the `ais` with `al` making `canal` this way.
+It will match `['ais', '1', 'al', 'cais,mais']` as it ends with `ais` and it is not in exceptions list `cais,mais`,
+then it replaces the `ais` with `al` making `canal` this way, after matching a particular rule the other plural rules are skipped.
 
-Complete code in https://gist.github.com/andrewaguiar/07e04b694d578d6c855dce02853c4410
+[gist.github.com/andrewaguiar/07e04b694d578d6c855dce02853c4410](https://gist.github.com/andrewaguiar/07e04b694d578d6c855dce02853c4410)
 
 ```ruby
 # Implementation of the algorithm for the RSLP Stemmer which was presented by the paper 
