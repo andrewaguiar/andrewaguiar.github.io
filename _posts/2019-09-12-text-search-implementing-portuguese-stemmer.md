@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Text Search - Implementing a Portuguese Stemmer
+title: "Text Search - Implementing a Portuguese Stemmer"
 image: "capybaha"
 ---
 
