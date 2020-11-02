@@ -22,7 +22,7 @@ in a rails application. Although this article focus in rails, the concepts are u
 When we think about information security we have 3 main elements a hacker can attack in our application / company,
 they are confidentiality, integrity and availability as known as CIA triad.
 
-![cia triad](/public/images/posts/2017-08-16-rails/cia.png)
+![Confidentiality, Integrity and Availability, the CIA triad represented as a triangle](/public/images/posts/2017-08-16-rails/cia.png)
 
 ### Confidentiality
 

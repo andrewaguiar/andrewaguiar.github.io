@@ -27,7 +27,7 @@ So I decided to create a command line tool with these features.
 Rpx [github.com/andrewaguiar/rpx](https://github.com/andrewaguiar/rpx) usage is pretty simple, just type `rpx <term> <replacement>` and it will present all occurencies of all git managed
 files `git ls-files`.
 
-![rpx preview](/public/images/posts/rpx-preview.png)
+![rpx usage output with terms matched preview](/public/images/posts/rpx-preview.png)
 
 You can then choose which occurencies you would like to replace by typing ids, ranges or even (a)ll.
 
