@@ -50,6 +50,53 @@ a `X` letter that works more as an icon than a text, so we can set a `aria-label
 <button aria-label="close current dialog" onclick="myDialog.close()">X</button>
 ```
 
+## Forms and inputs
+
+Creating accessible forms and inputs is not that difficult when you follow the default guidelines.
+
+### Always use label
+
+The label tag combined with `for` attribute is the recomendation when naming inputs. Some people like
+using `placeholder` to replace labels but they are not intended to be used like that. Placeholders should
+only be used as example values.
+
+```html
+<label for="user_name">Name:</label>
+<input id="user_name" name="user[name]" placeholder="Andrew S Aguiar" />
+```
+
+If you want to simulate the placeholder as label approach you can do something like:
+
+```html
+<div class="placeholder-container">
+  <input class="placeholder-input" type="text" id="user_name" />
+  <label class="placeholder-label" for="user_name">User Name</label>
+</div>
+
+<style>
+.placeholder-container {
+  position: relative;
+}
+.placeholder-label {
+  position: absolute;
+  top: 0;
+  left: 1em;
+}
+.placeholder-input {
+  padding: 1em;
+}
+.placeholder-input:focus + .placeholder-label {
+  display: none;
+}
+.placeholder-input:not(:placeholder-shown) + .placeholder-label {
+  display: none;
+}
+</style>
+```
+
+The magic here is using the sibling operator `+` and a `:not(:placeholder-shown)` selector so we hide the
+floating label when input is not empty and on focus.
+
 ## Images
 
 That's a very basic tip but it is a worthy always remember, always use the `alt` attribute in images, `alt` gives
