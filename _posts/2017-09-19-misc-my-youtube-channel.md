@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My YouTube Channel"
+title: "Misc - My youTube channel"
 image: "closed"
 ---
 
