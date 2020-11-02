@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Accessibility - Basic tips to make your site more accessible"
-image: "closed"
+image: "capybaha"
 ---
 
 In this post I present some basic tips I've learnt about accessibility (a11y).
