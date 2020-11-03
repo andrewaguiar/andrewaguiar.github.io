@@ -53,5 +53,7 @@ class DoSomeProcessing
 end
 
 # calling
-DoSomeProcessing.call('write a post in blog')
+result = DoSomeProcessing.call('write a post in blog')
+puts result
+# => "write a post in blog done"
 ```

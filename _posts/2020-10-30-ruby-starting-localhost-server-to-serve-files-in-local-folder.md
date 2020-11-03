@@ -17,7 +17,8 @@ If you want to make it accessible through internet you can use the [ngrok.com](h
 So just make the combination of
 
 ```shell
-ruby -run -ehttpd . -p8000 & ngrok http 8000
+ruby -run -ehttpd . -p8000 & \
+ngrok http 8000
 ```
 
 This way you will serve current folder in localhost:8000 and ngrok will make a tunnel through internet.

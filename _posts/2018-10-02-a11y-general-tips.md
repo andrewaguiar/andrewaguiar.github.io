@@ -103,7 +103,7 @@ That's a very basic tip but it is a worthy always remember, always use the `alt`
 a textual description of the image that will be read by the screen reader.
 
 ```
-<img src="" alt="table with one row with product photo, name and a delete button red" />
+<img src="image.png" alt="table with one row with product photo, name and a delete button red" />
 ```
 
 ## Skip to content button
@@ -157,7 +157,6 @@ Simple isn't it =)
 Typography is a very important part of your accessible design, it is important to keep fonts consistent,
 letter spacing and line height good as it has an impact in readability. Also for people with dyslexia it is
 important as well:
-
   - Avoid justified text, as uneven spaces between words can make it confusing to read.
   - Avoid italic, underscore and capital letters when stressing text, prefer bold.
   - Avoid too big paragraphs.
@@ -166,10 +165,9 @@ important as well:
 
 All focusable elements already have a tabbing order based on its order in html, but n some cases
 it is better to change it a little bit, to do this we can use the `tabindex` attribute
-
-  - tabindex=0 makes the element tabbable.
-  - tabbable=-1 makes the element untabbable.
-  - tabbable=N being N a positive number makes the element tabbable and sets the order on it.
+  - **tabindex=0** makes the element tabbable.
+  - **tabbable=-1** makes the element untabbable.
+  - **tabbable=N** being N a positive number makes the element tabbable and sets the order on it.
 
 ```html
 <div tabindex="0">Tabbable due to tabindex.</div>
@@ -182,7 +180,7 @@ it is better to change it a little bit, to do this we can use the `tabindex` att
 <div tabindex="1">Tabbable due to tabindex 1.</div>
 ```
 
-## Never supress outline
+## Never suppress outline
 
 Following the idea of tabbing consistency, focus trap and skip to content tips other tip is
 **never supress outline** in focusable elements. All browsers have a default style (normally
