@@ -22,14 +22,14 @@ One of the most prominent instantiations of the function is as follows.
 
 Given a query Q, containing keywords `q1....qn` the BM25 score of a document `D` is:
 
-![BM25 Formula](formula1.svg)
+![BM25 Formula](/public/images/posts/bm25-formula.png)
 
 where `f(qi, D)` is qi's term frequency (tf) in the document `D`, `|D|` is the length of the document `D` in words, and avgdl is the 
 average document length in the text collection from which documents are drawn. `k1` and `b` are free parameters, usually chosen, in absence of
 an advanced optimization, as `k1 in |1.2,2.0|` and `b = 0.75`. `IDF(qi)` is the IDF (inverse document frequency) weight of the query term
 `qi`. It is usually computed as:
 
-![IDF Formula](formula2.svg)
+![IDF Formula](/public/images/posts/idf-formula.png)
 
 where `N` is the total number of documents in the collection, and `n(q)` is the number of documents containing `qi`.
 
