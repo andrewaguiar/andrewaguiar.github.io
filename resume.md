@@ -6,8 +6,8 @@ title: Resume
 # Andrew Silva de Aguiar
 #### Senior Software Engineer (Ruby, Elixir, Javascript)
 
-I've been working as a software developer since 2006 and as a software development instructor since 2014.
-My specialties include Java, Ruby, web development and Solr. I am also studying Elixir, and Information Security.
+I've been working as a software developer since 2006 and as a software development instructor from 2014 to 2018.
+My specialties include java, ruby, elixir, web development and solr.
 
 Currently I've just finished a sabbatical pause in which I focused on my family and resting
 and now I am looking for a new opportunity as software developer (ruby or elixir) + javascript.
