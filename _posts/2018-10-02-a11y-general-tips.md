@@ -157,6 +157,7 @@ Simple isn't it =)
 Typography is a very important part of your accessible design, it is important to keep fonts consistent,
 letter spacing and line height good as it has an impact in readability. Also for people with dyslexia it is
 important as well:
+
   - Avoid justified text, as uneven spaces between words can make it confusing to read.
   - Avoid italic, underscore and capital letters when stressing text, prefer bold.
   - Avoid too big paragraphs.
@@ -165,6 +166,7 @@ important as well:
 
 All focusable elements already have a tabbing order based on its order in html, but n some cases
 it is better to change it a little bit, to do this we can use the `tabindex` attribute
+
   - **tabindex=0** makes the element tabbable.
   - **tabbable=-1** makes the element untabbable.
   - **tabbable=N** being N a positive number makes the element tabbable and sets the order on it.
@@ -183,9 +185,13 @@ it is better to change it a little bit, to do this we can use the `tabindex` att
 ## Never suppress outline
 
 Following the idea of tabbing consistency, focus trap and skip to content tips other tip is
-**never supress outline** in focusable elements. All browsers have a default style (normally
+**never suppress outline** in focusable elements. All browsers have a default style (normally
 a glowing blue line) to focusable elements when they are on focus. Some people like to remove it
 because it does not follows the site style. By doing this you are removing the visual indication
-of where the focus is and making the life of users with motor disabilities harder.
+of where the focus is and making the life of users with motor disabilities harder. My sugestion
+in this case is try to customize, never remove it totally.
 
-My sugestion in this case is: try to customize, never remove it totally.
+## References
+
+  - Web Accessibility Initiative: [www.w3.org/WAI](https://www.w3.org/WAI/)
+  - Accessibility linter CLI tool: [addyosmani.com/a11y](https://addyosmani.com/a11y/)
