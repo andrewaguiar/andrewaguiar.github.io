@@ -52,7 +52,7 @@ Lets take two small documents as examples:
 
 ```ruby
 doc1 = 'The domestic dog is a member of the genus Canis, which forms part of the wolf-like canids'
-doc2 = 'The cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as the domestic cat.
+doc2 = 'The cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as the domestic cat.'
 ```
 
 To create an inverted index we start with an empty hashmap:
