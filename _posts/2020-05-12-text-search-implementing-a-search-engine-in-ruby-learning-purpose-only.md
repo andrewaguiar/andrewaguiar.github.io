@@ -50,27 +50,27 @@ MiniSearch implements a inverted index (basically a hashmap where terms are keys
 
 Lets take two small documents as examples:
 
-```
+```ruby
 doc1 = 'The domestic dog is a member of the genus Canis, which forms part of the wolf-like canids'
 doc2 = 'The cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as the domestic cat.
 ```
 
 To create an inverted index we start with an empty hashmap:
 
-```
+```ruby
 ii = {}
 ```
 
 Now for a given document we transform its text in tokens (words):
 
-```
+```ruby
 doc1 = ["The", "domestic", "dog", "is", "a", "member", "of", "the", "genus", "Canis,", "which", "forms", "part", "of", "the", "wolf-like", "canids"]
 doc2 = ["The", "cat", "is", "a", "small", "carnivorous", "mammal.", "It", "is", "the", "only", "domesticated", "species", "in", "the", "family", "Felidae", "and", "often", "referred", "to", "as", "the", "domestic", "cat."]
 ```
 
 We take each term and create use it as a key in are hashmap `ii` and the value will be a list with all documents containing that term.
 
-```
+```ruby
 def index(doc_id, doc, ii)
   # 1 - tokenizer
   tokens = doc.split(' ')
@@ -129,7 +129,7 @@ tokens, we have `The` and `the`. lets clean the data before indexing.
 
 Lets change our define an index pipeline that will be called everytime a document is indexed
 
-```
+```ruby
 def index(doc_id, doc, ii)
   # 1 - tokenizer
   tokens = doc.split(' ')
@@ -151,7 +151,7 @@ end
 
 With this changes our index would be:
 
-```
+```ruby
 {
   'the' => [:doc1, :doc2],
   'domestic' => [:doc1, :doc2],
@@ -262,7 +262,7 @@ Stemmers are classes that implements the `def stem(word)` method, that receives 
 
 Example of a NaiveEnglishStemmer:
 
-```
+```ruby
 module MiniSearch
   module Stemmer
     class NaiveEnglishStemmer
