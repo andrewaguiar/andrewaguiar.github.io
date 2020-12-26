@@ -8,24 +8,48 @@
   * {
     font-family: 'Itim', cursive;
   }
-  .measure * {
-    z-index: 9;
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .invite {
+    width: 375px;
+    height: 667px;
+    color: white;
+    background-image: url('/public/1-ano-gabriel/ocean.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  .invite p {
+    font-size: 1em;
+    text-align: center;
+    padding: 0 6em;
+  }
+  .invite h1 {
+    font-size: 3em;
+    padding: 0 1em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .invite h2 {
+    font-size: 2em;
+    padding: 0 1em;
+    text-align: center;
   }
   </style>
-  <body style="background-color: #5ea4c5;">
-    <div class="measure center white relative">
-      <p class="tc f2">Venha para uma aventura no fundo do mar!</p>
-      <p class="tc f1 b ttu">1 ano de Gabriel</p>
-      <p class="tc f3">Vamos comemorar!</p>
-      <p class="tc f3">Sábado, 30 de janeiro de 2021, a partir das 12h00</p>
-      <p class="tc f3">Local: minha casa</p>
-      <p class="tc f3">Esperamos você!</p>
-
-      <img src="/public/1-ano-gabriel/peixe.png" style="z-index: -1; position: absolute; width: 70px; top: 100px; left: 20px;">
-      <img src="/public/1-ano-gabriel/estrela.png" style="z-index: -1; position: absolute; width: 50px; top: 120px; right: 20px;">
-
-      <img src="/public/1-ano-gabriel/alga-v.png" style="z-index: -1; position: absolute; width: 50px; bottom: 5px; left: 20px;">
-      <img src="/public/1-ano-gabriel/alga-r.png" style="z-index: -1; position: absolute; width: 50px; bottom: 10px; right: 20px;">
+  <body style="background-color: #458ccc;">
+    <div class="invite">
+      <h2>Venha para uma aventura no fundo do mar!</h2>
+      <h1>1 ano de Gabriel</h1>
+      <p>Vamos comemorar!</p>
+      <p>Sábado, 30 de janeiro de 2021, a partir das 12h00</p>
+      <p>Local: minha casa</p>
+      <p>Esperamos você!</p>
     </div>
   </body>
 </html>
