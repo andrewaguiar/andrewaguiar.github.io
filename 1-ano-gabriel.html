@@ -48,20 +48,24 @@
       <h1>1 ano de Gabriel</h1>
       <p>Vamos comemorar!</p>
       <p><span id='date'></span>, a partir das 12h00</p>
-      <p>Local: minha casa</p>
-      <p>Esperamos você!</p>
+      <p>Local: <span id='local'></span>minhacasa</p>
+      <p>Esperamos vocês!</p>
     </div>
   </body>
   <script>
   const params = new URLSearchParams(window.location.search);
   const date = document.querySelector('#date');
+  const local = document.querySelector('#local');
 
   if (params.get('maria-alex')) {
     date.innerHTML = 'Sábado, 30 de Janeiro de 2021';
+    local.innerHTML = 'minha casa';
   } else if (params.get('edivaldo-rose-junior')) {
     date.innerHTML = 'Domingo, 31 de Janeiro de 2021';
-  } else if (params.get('satiko-fernando-eiti')) {
+    local.innerHTML = 'minha casa';
+  } else if (params.get('satiko-fernando-eithi')) {
     date.innerHTML = 'Sábado, 13 de Fevereiro de 2021';
+    local.innerHTML = 'casa do vovô e da vovó';
   }
   </script>
 </html>
