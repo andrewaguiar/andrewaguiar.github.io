@@ -1,5 +1,6 @@
 <html>
   <head>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
     <style>
       @font-face {
         font-family: hdv_comic;
@@ -7,8 +8,14 @@
       }
 
       html, body {
+        font-family: 'hdv_comic', cursive;
+        color: #37b3e6;
         margin: 0;
         padding: 0;
+      }
+
+      a:visited {
+        color: #37b3e6;
       }
 
       body {
@@ -19,47 +26,56 @@
         height: 100%;
       }
       .info {
-        width: 100%;
+       width: 100%;
         box-sizing: border-box;
         padding: 0 60px 60px 60px;
         position: absolute;
         bottom: 0px;
         left: 0;
       }
-      .inner {
-        background: rgba(255, 255, 255, 0.9);
-        text-align: center;
-        padding: 0 20px;
-        border-radius: 30px;
-        border: 4px dashed #37b3e6;
+      .f1 { font-size: 5rem; }
+      .info:before {
+        content: '';
+        width: 210px;
+        height: 210px;
+        border: 2px solid red;
+        background-image: url('./gabriel.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        left: 50%;
+        top: -24px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 9;
       }
-      .inner * {
-        color: #37b3e6;
-      }
-      h1 {
-        font-family: 'hdv_comic', cursive;
-        font-size: 4em;
-      }
-      img { border-radius: 50%; }
-      p {
-        font-size: 2.4em;
-        font-family: 'hdv_comic', cursive;
-        font-weight: 300;
-      }
+
     </style>
   </head>
   <body>
     <div class="info">
-      <div class="inner">
-        <h1>Venha comemorar meus 2 aninhos!</h1>
-        <img src="./gabriel.png" />
-        <p>
-          29 de Janeiro (sábado) às 15 horas.
-        </p>
-        <p>
+      <div class="w-100 bg-white pa4 br5 tc relative">
+        <span class="dib h3"></span>
+        <h1 class="ma0 f1">Venha comemorar meus 2 aninhos!</h1>
+
+        <div class="w-100 flex mv0 mv5">
+          <div class="w-40">
+            <p class="mv0 f1">29</p>
+            <p class="mv0 f2">Janeiro</p>
+          </div>
+
+          <div class="w-20 items-center justify-center flex tc f1">|</div>
+
+          <div class="w-40">
+            <p class="mv0 f1">15</p>
+            <p class="mv0 f2">horas</p>
+          </div>
+        </div>
+
+        <p class="f2">
           Rua Catulo da Paixão Cearense, 238, salão de festas
-          <a target="_blank" href="https://www.google.com.br/maps/place/R.+Catulo+da+Paix%C3%A3o+Cearense,+238+-+Vila+da+Sa%C3%BAde,+S%C3%A3o+Paulo+-+SP,+04145-010/@-23.616719,-46.6360275,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5a52fb72fc4b:0x5581034a47cb9de2!8m2!3d-23.6167239!4d-46.6338388">
-            <i>(ver mapa)</i>
+          <a class="f2" target="_blank" href="https://www.google.com.br/maps/place/R.+Catulo+da+Paix%C3%A3o+Cearense,+238+-+Vila+da+Sa%C3%BAde,+S%C3%A3o+Paulo+-+SP,+04145-010/@-23.616719,-46.6360275,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5a52fb72fc4b:0x5581034a47cb9de2!8m2!3d-23.6167239!4d-46.6338388">
+            ver mapa
           </a>
         </p>
       </div>
