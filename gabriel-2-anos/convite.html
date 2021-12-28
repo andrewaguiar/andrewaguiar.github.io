@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <style>
+      @font-face {
+        font-family: hdv_comic;
+        src: url(./HVD_Comic_Serif_Pro.otf);
+      }
+
+      html, body, h2, p{
+        margin: 0;
+        padding: 0;
+      }
+      .bg {
+        position: relative;
+        width: 564px;
+        height: 800px;
+        display: block;
+        background: url('bg.jpg') no-repeat;
+      }
+      * {
+        font-family: 'hdv_comic', cursive;
+        color: white;
+      }
+      .bita, .name, .no {
+        position: absolute;
+        font-size: 33px;
+        transform: rotate(-11deg);
+      }
+      .name {
+        top: 205px;
+        left: 185px;
+        font-size: 34px;
+      }
+      .no {
+        top: 278px;
+        left: 192px;
+        font-size: 24px;
+        transform: rotate(-5deg);
+      }
+      .bita {
+        text-align: center;
+        top: 260px;
+        left: 254px;
+        font-size: 29px;
+        line-height: 28px;
+      }
+      .info {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 20px;
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+      }
+      .inner {
+        background: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px;
+        border: 3px dashed #37b3e6;
+      }
+      .inner * {
+        color: #37b3e6;
+      }
+
+      .date {
+        font-size: 20px;
+      }
+      .place {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <h2 class="name">Gabriel</h2>
+      <h2 class="no">No</h2>
+      <h2 class="bita">MUNDO <br/>Bita</h2>
+
+      <div class="info">
+        <div class="inner">
+           <h2>
+            Nossa aventura vai começar!
+          </h2>
+
+          <h1>
+            Venha comemorar meus 2 aninhos!
+          </h1>
+
+          <hr/>
+
+          <p class="date">
+            29 de Janeiro (sábado) às 15 horas
+          </p>
+
+          <p class="place">
+            Rua Catulo da Paixão Cearense, 238, (salão de festas)
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
