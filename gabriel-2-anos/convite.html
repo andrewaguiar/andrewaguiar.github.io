@@ -1,5 +1,6 @@
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
     <style>
       @font-face {
@@ -38,12 +39,19 @@
         position: absolute;
         z-index: 9;
       }
-
+      .notice {
+        bottom: top;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .notice p {
+        background-color: #ce559a;
+      }
     </style>
   </head>
   <body>
     <div class="info w-100 pa4 absolute bottom-0 left-0">
-      <div class="w-100 bg-white pa4 br5 tc relative">
+      <div class="w-100 bg-white pa4 br4 tc relative">
         <span class="dib h3"></span>
         <h2 class="ma0 f2 mv4">Nossa aventura vai começar!</h2>
         <h1 class="ma0 f1">Venha comemorar meus 2 aninhos!</h1>
@@ -74,5 +82,19 @@
         </p>
       </div>
     </div>
+
+    <div class="bg-transparent w-100 absolute f1 pa4 notice" style="display: none;">
+      <p class="white w-100 pa5 lh-copy ma0 tc br4">
+        Favor confirmar presença até 12/01/2022
+      </p>
+    </div>
   </body>
+  <script>
+    $(function () {
+      $('.notice').fadeIn(1000)
+      setTimeout(function () {
+        $('.notice').fadeOut(1000)
+      }, 4000);
+    });
+  </script>
 </html>
