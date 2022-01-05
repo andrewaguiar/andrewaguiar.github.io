@@ -1,6 +1,5 @@
 <html>
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
     <style>
       @font-face {
@@ -80,21 +79,11 @@
             ver mapa
           </a>
         </p>
+
+        <p class="f3">
+          Favor confirmar presença até 12/01/2022
+        </p>
       </div>
     </div>
-
-    <div class="bg-transparent w-100 absolute f1 pa4 notice" style="display: none;">
-      <p class="white w-100 pa5 lh-copy ma0 tc br4">
-        Favor confirmar presença até 12/01/2022
-      </p>
-    </div>
   </body>
-  <script>
-    $(function () {
-      $('.notice').fadeIn(1000)
-      setTimeout(function () {
-        $('.notice').fadeOut(1000)
-      }, 4000);
-    });
-  </script>
 </html>
