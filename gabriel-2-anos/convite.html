@@ -47,6 +47,21 @@
         background-color: #ce559a;
       }
     </style>
+    <script>
+      window.music = new Audio('bg.mp3');
+
+      window.playMusic = function () {
+        if (window.playing) {
+          window.music.pause();
+          window.playing = false;
+          document.querySelector('.play-music').innerHTML ='▶️ ';
+        } else {
+          window.music.play();
+          window.playing = true;
+          document.querySelector('.play-music').innerHTML = '⏸️';
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="info w-100 pa4 absolute bottom-0 left-0">
@@ -62,7 +77,7 @@
           </div>
 
           <div class="w-20 items-center justify-center flex tc f1">
-            <button class="pointer bg-transparent bn" type="button" onclick="if (!window.playing) { window.playing = true; new Audio('bg.mp3').play(); }">
+            <button class="pointer bg-transparent bn play-music" type="button" onclick="playMusic();">
               ▶️ 
             </button>
           </div>
